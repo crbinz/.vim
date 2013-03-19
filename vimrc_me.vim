@@ -44,7 +44,7 @@ set lines=66 columns=111
 set showmatch
 
 " use conceal
-set conceallevel=1
+set conceallevel=2 "level 2 = hide, don't replace with any character
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
