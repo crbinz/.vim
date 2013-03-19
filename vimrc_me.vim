@@ -45,6 +45,7 @@ set showmatch
 
 " use conceal
 set conceallevel=2 "level 2 = hide, don't replace with any character
+set concealcursor=nc	"define when to hide concealed text, 'nc' is in normal and command line mode
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
