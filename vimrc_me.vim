@@ -2,6 +2,13 @@
 " Maintainer:	Chris Binz
 "
 
+" toggle toolbar off
+set guioptions-=T
+
+" make up/down behave
+nnoremap j gj
+nnoremap k gk
+
 " PLUGIN: Pathogen
 " Use pathogen to load plugins from bundle directory
 filetype off
