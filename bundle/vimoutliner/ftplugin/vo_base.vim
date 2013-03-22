@@ -702,7 +702,7 @@ if !exists("*LinkForward")
 
 		
 			" different rules for different filetypes - URLs and PDFs
-			if (match(fn,"http[s?]:") != -1)
+			if (match(fn,"http") == 0)
 				execute "silent !start explorer.exe ".fn
 			elseif (match(fn,".pdf") != -1)
 				execute "silent !start explorer.exe ".fn
