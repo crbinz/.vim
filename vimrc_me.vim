@@ -2,8 +2,18 @@
 " Maintainer:	Chris Binz
 "
 
+" OPTIONS
 " toggle toolbar off
 set guioptions-=T
+"default window size
+set lines=66 columns=111
+" match parenthesis
+set showmatch
+set t_Co=256
+"colorscheme darkblue
+colorscheme desert
+set guifont=Consolas:h11:cANSI
+
 
 " make up/down behave
 nnoremap j gj
@@ -43,13 +53,6 @@ set spell
 set backupdir=C:\Users\cbinz\Documents\vimtemp\
 set directory=C:\Users\cbinz\Documents\vimtemp\
 
-"default window size
-set lines=66 columns=111
-
-
-" match parenthesis
-set showmatch
-
 " use conceal
 set conceallevel=2 "level 2 = hide, don't replace with any character
 set concealcursor=nc	"define when to hide concealed text, 'nc' is in normal and command line mode
@@ -65,9 +68,6 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-colorscheme darkblue
-
 
 "-----------------------------------------------
 " From here down is boilerplate that I'm leaving in
