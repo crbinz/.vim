@@ -84,9 +84,9 @@ setlocal noexpandtab
 setlocal nosmarttab
 setlocal softtabstop=0 
 setlocal foldlevel=20
-setlocal foldcolumn=1		" turns on "+" at the beginning of close folds
-setlocal tabstop=4			" tabstop and shiftwidth must match
-setlocal shiftwidth=4		" values from 2 to 8 work well
+setlocal foldcolumn=0		" turns on "+" at the beginning of close folds
+setlocal tabstop=2			" tabstop and shiftwidth must match
+setlocal shiftwidth=2		" values from 2 to 8 work well
 setlocal foldmethod=expr
 setlocal foldexpr=MyFoldLevel(v:lnum)
 setlocal indentexpr=
