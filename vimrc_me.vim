@@ -13,6 +13,7 @@ set t_Co=256
 "colorscheme darkblue
 colorscheme desert
 set guifont=Consolas:h11:cANSI
+set tabstop=2
 
 
 " make up/down behave
