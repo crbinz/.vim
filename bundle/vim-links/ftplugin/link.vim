@@ -14,9 +14,10 @@ if !exists("*LinkForward")
 			let fnr = @"
 			"let fn= substitute(getline('.'),'^.*\[\[\([^\]|]*\)\|\].*$',"\\1",'g') "modified
 
-			let fn = substitute(fnr,"\|.*","","")
+			let fnr2 = substitute(fnr,"\[","","")	" strip leading bracket if it exists
+			let fn = substitute(fnr2,"\|.*","","")
 			echo fnr
-		
+
 			" different rules for different filetypes - URLs and PDFs
 			if (strlen(fn) == 0)
 				" do nothing
