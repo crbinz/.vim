@@ -687,13 +687,6 @@ endif
 
 runtime! ftplugin/link.vim
 
-" commented out... just use Ctrl+o
-"if !exists("*LinkBackward")
-"	function! LinkBackward()
-"		execute "e ".g:fromFile
-"	endfunction
-"endif
-"nnoremap <bs> :call LinkBackward()<cr>
 
 " The End
 " vim600: set foldmethod=marker foldlevel=0:

@@ -8,8 +8,7 @@
 if !exists("*LinkForward")
 		function! LinkForward()
 			let g:fromFile=expand('%:p')
-			"let fnr= substitute(getline('.'),'^.*\[\[\([^\]]*\)\].*$',"\\1",'g')
-			let fnr= substitute('yi[','^.*\[\[\([^\]]*\)\].*$',"\\1",'g')
+			let fnr= substitute(getline('.'),'^.*\[\[\([^\]]*\)\].*$',"\\1",'g')
 			"let fn= substitute(getline('.'),'^.*\[\[\([^\]|]*\)\|\].*$',"\\1",'g') "modified
 			let fn = substitute(fnr,"\|.*","","")
 			echo fn
@@ -27,11 +26,3 @@ if !exists("*LinkForward")
 endif
 
 nnoremap <cr> :call LinkForward()<cr>
-
-" commented out... just use Ctrl+o
-"if !exists("*LinkBackward")
-"	function! LinkBackward()
-"		execute "e ".g:fromFile
-"	endfunction
-"endif
-"nnoremap <bs> :call LinkBackward()<cr>
