@@ -9,7 +9,8 @@ hi outlLink term=underline cterm=underline ctermfg=9 gui=underline guifg=#80a0ff
 syn match outlLink '\[\[' conceal 	"beginning of a bare link
 syn match outlLink /\[\[[^]|]*|/ conceal"beginning of a renamed link
 syn match outlLink '\]\]' conceal	"end
-syn match outlLink '\[\[.\+\]\]' contains=outlLink "change highlighting of entire link
+"syn match outlLink '\[\[.\+\]\]' contains=outlLink "change highlighting of entire link
+syn match outlLink '\[\[.\{-}\]\]' contains=outlLink "change highlighting of entire link
 
 syntax region OL1 start=+^[^:\t]+ end=+^[^:\t]+me=e-1 contains=outlTags,outlLink,BT1,BT2,PT1,PT2,TA1,TA2,UT1,UT2,UB1,UB2,spellErr,SpellErrors,BadWord,OL2 keepend
 syntax region OL2 start=+^\t[^:\t]+ end=+^\t[^:\t]+me=e-2 contains=outlTags,outlLink,BT2,BT3,PT2,PT3,TA2,TA3,UT2,UT3,UB2,UB3,spellErr,SpellErrors,BadWord,OL3 keepend
