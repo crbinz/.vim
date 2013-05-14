@@ -146,7 +146,6 @@ else
 
 	" colors for tags
 	hi outlTags guifg=red	ctermfg=red
-	hi outlLink term=underline cterm=underline ctermfg=9 gui=underline guifg=#80a0ff
 
 	" color for body text
 	hi BT1 guifg=green	ctermfg=green
@@ -217,17 +216,11 @@ endif
 syn clear
 syn sync fromstart
 
-" vimwiki-style folding
-" match a vimwiki-style link
-" use this with set: conceallevel=2 in vimrc
-"NOTE: escaping is weird in Vim...
-syn match outlLink '\[\[' conceal 	"beginning of a bare link
-syn match outlLink /\[\[[^]|]*|/ conceal"beginning of a renamed link
-syn match outlLink '\]\]' conceal	"end
-syn match outlLink '\[\[.\+\]\]' contains=outlLink "change highlighting of entire link
-
 syn match outlTags '_tag_\w*' contained
 syn match outlTags '_ilink_\s*\(.\{-}:\s\)\?.*' contained
+
+" load vim-links syntax file... eventually do this some other way
+runtime! syntax/link.vim
 
 " Noel's style of body text {{{2
 syntax region BT1 start=+^ \S+ skip=+^ \S+ end=+^\S+me=e-1 end=+^\(\t\)\{1}\S+me=e-2 contains=spellErr,SpellErrors,BadWord contained
