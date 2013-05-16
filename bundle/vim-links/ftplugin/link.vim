@@ -7,34 +7,34 @@
 " outer if wrapper checks to make sure function is not being redefined
 if !exists("*LinkForward")
 		function! LinkForward()
-			"let g:fromFile=expand('%:p')
-			"let fnr= substitute(getline('.'),'^.*\[\[\([^\]]*\)\].*$',"\\1",'g')
-			"let fnr= substitute('yi[','^.*\[\[\([^\]]*\)\].*$',"\\1",'g')
-			normal yi[
-			let fnr = @"
-			"let fn= substitute(getline('.'),'^.*\[\[\([^\]|]*\)\|\].*$',"\\1",'g') "modified
+			let test = expand("<cWORD>")	
+			if (match(test,"[[") == 0)	" word starts with double brackets
+				normal yi[
+				let fnr = @"
 
-			let fnr2 = substitute(fnr,"\[","","")	" strip leading bracket if it exists
-			let fn = substitute(fnr2,"\|.*","","")
-			echo fnr
+				let fnr = substitute(fnr,"\[","","")	" strip leading bracket if it exists
+				let fnr = substitute(fnr,"\]","","")	" strip trailing bracket if it exists
+				let fn = substitute(fnr,"\|.*","","")
+				echo fnr
 
-			" different rules for different filetypes - URLs and PDFs
-			if (strlen(fn) == 0)
+				" different rules for different filetypes - URLs and PDFs
+				if (strlen(fn) == 0)
 				" do nothing
-			elseif (match(fn,"http") == 0)
-				execute "silent !start explorer.exe ".fn
-			elseif (match(fn,".pdf") != -1)
-				execute "silent !start explorer.exe ".fn
-			else " if unmatched, try editing as a text file, in a new tab
-				execute "tabe ".fn
+				elseif (match(fn,"http") == 0)
+					execute "silent !start explorer.exe ".fn
+				elseif (match(fn,".pdf") != -1)
+					execute "silent !start explorer.exe ".fn
+				else " if unmatched, try editing as a text file, in a new tab
+					execute "tabe ".fn
+				endif
+
+				" clear the variables here
+				unlet fn
+				unlet fnr
+
+				" and clear the unnamed register (from yi[)
+				let @"=''
 			endif
-
-			" clear the variables here
-			unlet fn
-			unlet fnr
-
-			" and clear the unnamed register (from yi[)
-			let @"=''
 		endfunction
 endif
 
