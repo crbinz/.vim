@@ -14,10 +14,15 @@ set t_Co=256
 colorscheme desert
 set guifont=Consolas:h11:cANSI
 
+" save Foldings automatically
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
 
 " make up/down behave
 nnoremap j gj
 nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 
 " PLUGIN: Pathogen
 " Use pathogen to load plugins from bundle directory
