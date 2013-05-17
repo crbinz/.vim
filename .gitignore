@@ -41,3 +41,7 @@ doc/tags
 
 ## vim-links, now a separate repo
 bundle/vim-links/*
+
+## "view" files, for saved folds
+view/*
+view/

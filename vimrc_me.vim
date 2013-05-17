@@ -18,6 +18,9 @@ set guifont=Consolas:h11:cANSI
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
+" guioptions - e for tab pages, g for graying menu items, m for menu bar
+set go=egm
+
 " make up/down behave
 nnoremap j gj
 nnoremap k gk
