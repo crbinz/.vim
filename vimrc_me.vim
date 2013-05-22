@@ -1,6 +1,6 @@
 "
 " Maintainer:	Chris Binz
-"
+"%
 
 " OPTIONS
 " toggle toolbar off
@@ -35,6 +35,9 @@ call pathogen#helptags()
 " enable pathogen
 execute pathogen#infect()
 
+" PLUGIN: NERDTree
+" Map :NERDTree command to <leader>N
+noremap <leader>N :NERDTree<CR>
 
 " PLUGIN: Powerline
 set laststatus=2
@@ -55,8 +58,10 @@ let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
 "allow hoisting
 let g:vo_modules_load="checkbox:hoist"
 let maplocalleader= ",,"
-"spellcheck
+" enable spellcheck
 set spell
+" disable check for capitalization
+set spellcapcheck=""
 
 " change backup/swap file directory
 set backupdir=C:\Users\cbinz\Documents\vimtemp\
