@@ -14,9 +14,14 @@ set t_Co=256
 colorscheme desert
 set guifont=Consolas:h11:cANSI
 
-" save Foldings automatically
+" save Foldings automatically -> These are stored in views
+" first specify view dir (Stored in Dropbox for portability)
+set viewdir=~/Dropbox/vim/vimfiles/view 
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
+
+" specify where viminfo should be pulled from
+set viminfo+=n~/Dropbox/vim/vimfiles/_viminfo
 
 " guioptions - e for tab pages, g for graying menu items, m for menu bar
 set go=egm
