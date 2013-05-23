@@ -78,10 +78,13 @@ let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
 "allow hoisting
 let g:vo_modules_load="checkbox:hoist"
 let maplocalleader= ",,"
+
 " enable spellcheck
 set spell
 " disable check for capitalization
 set spellcapcheck=""
+" spellfile is local to each file, use this line to set it
+"set spellfile=~/Dropbox/vim/vimfiles/spell/en.latin1.add
 
 " change backup/swap file directory
 if has("win32") || has("win64")
