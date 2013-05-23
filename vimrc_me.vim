@@ -69,8 +69,11 @@ set spell
 set spellcapcheck=""
 
 " change backup/swap file directory
-set backupdir=C:\Users\cbinz\Documents\vimtemp\
-set directory=C:\Users\cbinz\Documents\vimtemp\
+if has("win32") || has("win64")
+   set directory=$TMP
+else
+      set directory=/tmp
+end
 
 " use conceal
 set conceallevel=2 "level 2 = hide, don't replace with any character
