@@ -2,6 +2,16 @@
 " Maintainer:	Chris Binz
 "%
 
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
 " OPTIONS
 " toggle toolbar off
 set guioptions-=T
@@ -84,14 +94,6 @@ end
 set conceallevel=2 "level 2 = hide, don't replace with any character
 set concealcursor=nc	"define when to hide concealed text, 'nc' is in normal and command line mode
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
