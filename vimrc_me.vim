@@ -4,9 +4,9 @@
 
 
 " When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
+"if v:progname =~? "evim"
+"  finish
+"endif
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -22,7 +22,11 @@ set showmatch
 set t_Co=256
 "colorscheme darkblue
 colorscheme desert
-set guifont=Consolas:h11:cANSI
+if has("win32")
+	set guifont=Consolas:h11:cANSI
+else
+	set guifont=Consolas:h14
+endif
 
 " save Foldings automatically -> These are stored in views
 " first specify view dir (Stored in Dropbox for portability)
@@ -72,7 +76,9 @@ set grepprg=grep\ -nH\ $*
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 " PDF viewer
-let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
+if has("win32") || has("win64")
+	let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
+endif
 
 " PLUGIN: vim-outliner
 "allow hoisting
