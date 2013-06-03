@@ -373,6 +373,13 @@ endfunction
 " Insert the time.
 function InsertTime(ba)
 	let @x = strftime("%T")
+
+	" On Windows systems, strftime does not return anything for a %T argument
+	" Check for this, replace with %H:%M:%S
+	if @x == ""
+		let @x = strftime("%H:%M:%S")	
+	endif
+
 	if a:ba == "0"
 		normal! "xp
 	else
@@ -384,7 +391,15 @@ endfunction
 " Insert a space, then the time.
 function InsertSpaceTime()
 	let @x = " "
-	let @x = @x . strftime("%T")
+	
+	" On Windows systems, strftime does not return anything for a %T argument
+	" Check for this, replace with %H:%M:%S
+	if strftime("%T") == ""
+		let @x = @x . strftime("%H:%M:%S")
+	else
+		let @x = @x . strftime("%T")
+	endif
+
 	normal! "xp
 endfunction
 "}}}2
