@@ -28,11 +28,18 @@ else
 	set guifont=Consolas:h14
 endif
 
+" FOLDING
 " save Foldings automatically -> These are stored in views
 " first specify view dir (Stored in Dropbox for portability)
 set viewdir=~/Dropbox/vim/vimfiles/view 
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
+" Don't screw up folds when inserting text that might affect them, until
+" leaving insert mode. Foldmethod is local to the window. Protect against
+" screwing up folding when switching between windows.
+autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+
 
 " specify where viminfo should be pulled from
 set viminfo+=n~/Dropbox/vim/vimfiles/_viminfo
