@@ -46,6 +46,14 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+" related: enable movement with ALT key while in insert mode
+set winaltkeys=no		" disables menu opening for ALT keys
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
+inoremap <A-w> <C-o>w
+inoremap <A-b> <C-o>b
 
 " PLUGIN: vim-links
 " add one of these for each file type you want vim-links to be active
