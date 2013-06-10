@@ -27,6 +27,10 @@ else
 	set guifont=Consolas:h14
 endif
 
+" vim-notes
+let g:notes_directories= ['~/notes']
+let g:notes_suffix='.txt'
+
 " FOLDING
 " save Foldings automatically -> These are stored in views
 " first specify view dir (Stored in Dropbox for portability)
