@@ -39,7 +39,7 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 " specify where viminfo should be pulled from
-set viminfo+=n~/notes/_viminfo
+set viminfo='1000,<50,s10,h,rA:,rB:,n~/notes/_viminfo
 
 " guioptions - e for tab pages, g for graying menu items, m for menu bar
 set go=egm
