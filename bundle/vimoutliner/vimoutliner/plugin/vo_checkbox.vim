@@ -231,11 +231,14 @@ endfunction
 function! SwitchBox()
    let questa = strridx(getline("."),"[_]")
    let questb = strridx(getline("."),"[X]")
-   if (questa != -1) || (questb != -1)
+   let questc = strridx(getline("."),"[\.]")
+   if (questa != -1) || (questb != -1) || (questc != -1)
 	   if (questa != -1) 
 	      substitute/\[_\]/\[X\]/
-	   else
+	   elseif (questb != -1)
 	      substitute/\[X\]/\[_\]/
+	   else
+	      substitute/\[\.\]/\[X\]/
 	   endif
    endif
 endfunction
