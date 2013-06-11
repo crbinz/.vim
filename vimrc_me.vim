@@ -1,5 +1,4 @@
-"
-" Maintainer:	Chris Binz
+" " Maintainer:	Chris Binz
 "%
 
 " When started as "evim", evim.vim will already have done these settings.
@@ -31,6 +30,12 @@ endif
 let g:notes_directories= ['~/notes']
 let g:notes_suffix='.txt'
 
+" Enable file type detection.
+" Use the default filetype settings, so that mail gets 'tw' set to 72,
+" 'cindent' is on in C files, etc.
+" Also load indent files, to automatically do language-dependent indenting.
+filetype plugin indent on
+
 " FOLDING
 " save Foldings automatically -> These are stored in views
 " first specify view dir (Stored in Dropbox for portability)
@@ -60,7 +65,8 @@ inoremap <A-b> <C-o>b
 
 " PLUGIN: vim-links
 " add one of these for each file type you want vim-links to be active
-"autocmd BufRead,BufNewFile *.otl setlocal filetype=vo_base.link
+" NOTE: Make sure this is done after 'filetype plugin indent on'
+autocmd BufRead,BufNewFile *.otl setlocal filetype=vo_base.link
 
 " PLUGIN: Pathogen
 " Use pathogen to load plugins from bundle directory
@@ -158,11 +164,6 @@ endif
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx

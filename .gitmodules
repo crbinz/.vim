@@ -13,6 +13,7 @@
 [submodule "bundle/vim-notes"]
 	path = bundle/vim-notes
 	url = git://github.com/xolox/vim-notes
+	ignore = dirty
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = git://github.com/xolox/vim-misc
