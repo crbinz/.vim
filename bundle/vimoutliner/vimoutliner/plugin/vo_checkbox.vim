@@ -164,6 +164,7 @@ map <silent><buffer> <localleader>cd :call DeleteCheckbox()<cr>
 
 " switch the status of the box
 map <silent><buffer> <localleader>cx :call SwitchBox()<cr>:call NewHMD(FindRootParent(line(".")))<cr>
+map <silent><buffer> <localleader>c. :call DotBox()<cr>:call NewHMD(FindRootParent(line(".")))<cr>
 
 " calculate the proportion of work done on the subtree
 map <silent><buffer> <localleader>cz :call NewHMD(FindRootParent(line(".")))<cr>
@@ -235,6 +236,23 @@ function! SwitchBox()
 	      substitute/\[_\]/\[X\]/
 	   else
 	      substitute/\[X\]/\[_\]/
+	   endif
+   endif
+endfunction
+"}}}1
+" DotBox() {{{1
+" Switch the state of the checkbox on the current line to/from a [.] (in progress)
+function! DotBox()
+   let questa = strridx(getline("."),"[_]")
+   let questb = strridx(getline("."),"[X]")
+   let questc = strridx(getline("."),"[\.]")
+   if (questa != -1) || (questb != -1) || (questc != -1)
+	   if (questa != -1) 
+	      substitute/\[_\]/\[\.\]/
+       	   elseif (questb != -1)
+	      substitute/\[X\]/\[\.\]/
+	   else
+	      substitute/\[\.\]/\[_\]/
 	   endif
    endif
 endfunction
