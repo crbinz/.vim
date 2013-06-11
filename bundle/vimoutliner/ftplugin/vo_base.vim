@@ -700,7 +700,7 @@ if exists('g:vo_modules_load')
 unlet! vo_module
 endif
 
-runtime! ftplugin/link.vim
+"runtime! ftplugin/link.vim
 
 " The End
 " vim600: set foldmethod=marker foldlevel=0:

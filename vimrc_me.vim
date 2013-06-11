@@ -60,8 +60,7 @@ inoremap <A-b> <C-o>b
 
 " PLUGIN: vim-links
 " add one of these for each file type you want vim-links to be active
-"autocmd! BufNewFile,BufReadPre,FileReadPre  *.otl runtime ~/Dropbox/vim/vimfiles/bundle/vim-links/syntax/*.vim
-"autocmd! BufNewFile,BufReadPre,FileReadPre  *.otl runtime ~/Dropbox/vim/vimfiles/bundle/vim-links/ftplugin/*.vim
+"autocmd BufRead,BufNewFile *.otl setlocal filetype=vo_base.link
 
 " PLUGIN: Pathogen
 " Use pathogen to load plugins from bundle directory
