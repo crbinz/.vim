@@ -42,7 +42,9 @@ endif
 "----------------------------------------
 	" save Foldings automatically -> These are stored in views
 	" first specify view dir (Stored in Dropbox for portability)
-	set viewdir=~/notes/view 
+	" notes viewfiles in a	different dir.
+	setl viewdir=~/view
+	autocmd FileType outliner,vo_base setl viewdir=~/notes/view 	
 	au BufWinLeave * silent! mkview
 	au BufWinEnter * silent! loadview
 "----------------------------------------
@@ -81,7 +83,7 @@ endif
 			" add one of these for each file type you want vim-links to be active
 			" NOTE: make sure these lines appear after other syntax is set in .vimrc (i.e.
 			" after `syntax on`
-			autocmd FileType vo_base setlocal ft+=.link
+			autocmd FileType vo_base setlocal ft+=.links
 	" PLUGIN: NERDTree
 			" Map :NERDTree command to <leader>N
 			noremap <leader>N :NERDTree<CR>
@@ -111,6 +113,7 @@ endif
 "           FILE MANAGEMENT
 "----------------------------------------
 		" specify where viminfo should be pulled from
+		" viminfo is where marks are stored
 		set viminfo='1000,<50,s10,h,rA:,rB:,n~/notes/_viminfo
 		" change backup/swap file directory
 		if has("win32") || has("win64")
