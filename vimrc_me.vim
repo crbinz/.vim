@@ -90,7 +90,11 @@ endif
 	" PLUGIN: Powerline
 			set laststatus=2	" Always display the statusline
 			set noshowmode		" Hide the default mode text
-			set rtp+=C:/Users/cbinz/Dropbox/vim/vimfiles/bundle/powerline/powerline/bindings/vim
+			if has("win32") || has("win64")
+				set rtp+=~/Dropbox/vim/vimfiles/bundle/powerline/powerline/bindings/vim
+			else
+				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+			endif
 	" PLUGIN: vim-latex
 			" IMPORTANT: grep will sometimes skip displaying the file name if you
 			" search in a singe file. This will confuse Latex-Suite. Set your grep
