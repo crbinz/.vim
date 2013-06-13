@@ -104,10 +104,15 @@ endif
 			" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 			" The following changes the default filetype back to 'tex':
 			let g:tex_flavor='latex'
-			" PDF viewer
+			" PDF viewer (other OS's should work by default)
 			if has("win32") || has("win64")
 				let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
 			endif
+			" Suppress all warnings below level 4
+			let g:TCLevel = 4
+			" Make LaTeX-suite stop opening files with errors
+			" automatically
+			let g:Tex_GotoError=0
 	" PLUGIN: vim-outliner
 			"allow hoisting
 			let g:vo_modules_load="checkbox:hoist"

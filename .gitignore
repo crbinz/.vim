@@ -43,3 +43,5 @@ doc/tags
 view/*
 view/
 
+##netrw history files, of no use on other machines
+.netrwhist
