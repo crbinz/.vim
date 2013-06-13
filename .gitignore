@@ -39,12 +39,7 @@ doc/latex-suite-quickstart.html
 doc/tags
 *.pyc
 
-## vim-links, now a separate repo
-bundle/vim-links/*
-
 ## "view" files, for saved folds. not version controlled, but synced in dropbox
 view/*
 view/
 
-## viminfo. not version controlled, but synced in dropbox
-_viminfo
