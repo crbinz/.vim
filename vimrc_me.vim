@@ -41,7 +41,7 @@ endif
 "              FOLDING
 "----------------------------------------
 	" save Foldings automatically -> These are stored in views
-	" first specify view dir (Stored in Dropbox for portability)
+	" first specify view dir 
 	" notes viewfiles in a	different dir.
 	setl viewdir=~/view
 	autocmd FileType outliner,vo_base setl viewdir=~/notes/view 	
@@ -91,7 +91,7 @@ endif
 			set laststatus=2	" Always display the statusline
 			set noshowmode		" Hide the default mode text
 			if has("win32") || has("win64")
-				set rtp+=~/Dropbox/vim/vimfiles/bundle/powerline/powerline/bindings/vim
+				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 			else
 				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 			endif
@@ -118,12 +118,12 @@ endif
 "----------------------------------------
 		" specify where viminfo should be pulled from
 		" viminfo is where marks are stored
-		set viminfo='1000,<50,s10,h,rA:,rB:,n~/notes/_viminfo
+		set viminfo='1000,<50,s10,h,rA:,rB:,n~/notes/.viminfo
 		" change backup/swap file directory
 		if has("win32") || has("win64")
 			 set directory=$TMP
 		else
-					set directory=/tmp
+			set directory=/tmp
 		end
 "----------------------------------------
 
