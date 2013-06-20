@@ -27,7 +27,7 @@ endif
 			if has("win32")
 				set guifont=Consolas:h11:cANSI
 			else
-				set guifont=Consolas:h14
+				set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 			endif
 	" SPELLING
 			" enable spellcheck
@@ -93,6 +93,9 @@ endif
 			if has("win32") || has("win64")
 				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 			else
+				python from powerline.vim import setup as powerline_setup
+				python powerline_setup()
+				python del powerline_setup
 				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 			endif
 	" PLUGIN: vim-latex
