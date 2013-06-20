@@ -25,7 +25,13 @@ endif
 			set showmatch
 	" COLORS AND FONT	
 			if has("win32")
-				set guifont=Consolas:h11:cANSI
+				" need to make sure you're using a powerline
+				" patched font for powerline to work correctly
+				" github.com/nicolalamacchia/powerline-consolas
+				" for the patched Consolas
+				set guifont=Consolas:h11
+				"powerline also requires utf-8 encoding
+				set encoding=utf-8
 			else
 				set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 			endif
@@ -88,6 +94,7 @@ endif
 			" Map :NERDTree command to <leader>N
 			noremap <leader>N :NERDTree<CR>
 	" PLUGIN: Powerline
+			let g:Powerline_symbols="fancy"
 			set laststatus=2	" Always display the statusline
 			set noshowmode		" Hide the default mode text
 			if has("win32") || has("win64")

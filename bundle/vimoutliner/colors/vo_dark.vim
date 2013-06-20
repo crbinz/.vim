@@ -15,7 +15,7 @@ hi OL9 guifg=white	ctermfg=white
 
 " colors for tags
 hi outlTags guifg=darkred	ctermfg=darkred
-hi outlLink term=underline cterm=underline ctermfg=9 gui=underline guifg=#80a0ff
+"hi outlLink term=underline cterm=underline ctermfg=9 gui=underline guifg=#80a0ff
 
 " color for body text
 hi BT1 guifg=green	ctermfg=green
