@@ -82,9 +82,6 @@ endif
 			call pathogen#helptags()
 			" enable pathogen
 			execute pathogen#infect()
-	" PLUGIN: vim-notes
-			let g:notes_directories= ['~/notes']
-			let g:notes_suffix='.txt'
 	" PLUGIN: vim-links
 			" add one of these for each file type you want vim-links to be active
 			" NOTE: make sure these lines appear after other syntax is set in .vimrc (i.e.
