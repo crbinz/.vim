@@ -118,6 +118,10 @@ endif
 			" PDF viewer (other OS's should work by default)
 			if has("win32") || has("win64")
 				let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
+			else
+				let g:Tex_TreatMacViewerAsUNIX = 1
+				let g:Tex_ExecuteUNIXViewerInForeground = 1
+				let g:Tex_ViewRule_pdf = 'open -a Skim'
 			endif
 			" Suppress all warnings below level 4
 			let g:TCLevel = 4
