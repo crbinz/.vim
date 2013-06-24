@@ -56,6 +56,7 @@ endif
 "----------------------------------------
 
 "              MAPPINGS
+"  (also see plugin-based mappings below)
 "----------------------------------------
 	" make up/down behave
 	nnoremap j gj
@@ -132,6 +133,9 @@ endif
 			"allow hoisting
 			let g:vo_modules_load="checkbox:hoist"
 			let maplocalleader= ",,"
+	" PLUGIN: CtrlP
+			" easy buffer listing
+			nnoremap <leader>b :CtrlPBuffer<CR>
 "----------------------------------------
 
 "           FILE MANAGEMENT
