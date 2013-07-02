@@ -135,7 +135,7 @@ endif
 			let maplocalleader= ",,"
 	" PLUGIN: CtrlP
 			" easy buffer listing
-			nnoremap <leader>b :CtrlPBuffer<CR>
+			nnoremap <C-b> :CtrlPBuffer<CR>
 "----------------------------------------
 
 "           FILE MANAGEMENT
