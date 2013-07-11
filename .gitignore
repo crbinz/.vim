@@ -45,3 +45,6 @@ view/
 
 ##netrw history files, of no use on other machines
 .netrwhist
+
+# spellfiles, NOT the wordlists
+*.spl
