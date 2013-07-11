@@ -9,18 +9,18 @@ if &t_Co > 2 || has("gui_running")
 	set hlsearch
 endif
 
-"              OPTIONS
+"            OPTIONS
 "----------------------------------------
 	" GUI OPTIONS
-			" toggle toolbar off
-			set guioptions-=T
+			" toggle toolbar, menu bar off
+			set guioptions-=mT
+			" guioptions - e for tab pages, g for graying menu items, m for menu bar
+			"set go=egm
 			"default window size
 			set lines=66 columns=111
 			"colorscheme darkblue
 			colorscheme desert
 			set t_Co=256
-			" guioptions - e for tab pages, g for graying menu items, m for menu bar
-			set go=egm
 		" match parenthesis
 			set showmatch
 	" COLORS AND FONT	
