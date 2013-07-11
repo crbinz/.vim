@@ -12,10 +12,9 @@ endif
 "            OPTIONS
 "----------------------------------------
 	" GUI OPTIONS
-			" toggle toolbar, menu bar off
-			set guioptions-=mT
-			" guioptions - e for tab pages, g for graying menu items, m for menu bar
-			"set go=egm
+			" guioptions - e for tab pages, g for graying menu
+			" items, m for menu bar, T for toolbar
+			set go=
 			"default window size
 			set lines=66 columns=111
 			"colorscheme darkblue
