@@ -94,18 +94,16 @@ endif
 	" PLUGIN: NERDTree
 			" Map :NERDTree command to <leader>N
 			noremap <leader>N :NERDTree<CR>
-	" PLUGIN: Powerline
-			let g:Powerline_symbols="fancy"
-			set laststatus=2	" Always display the statusline
-			set noshowmode		" Hide the default mode text
-			if has("win32") || has("win64")
-				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-			else
-				python from powerline.vim import setup as powerline_setup
-				python powerline_setup()
-				python del powerline_setup
-				set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-			endif
+	" PLUGIN: vim-airline
+			let g:airline_enable_fugitive=1
+			let g:airline_left_sep = ''
+			let g:airline_left_sep = ''
+			let g:airline_right_sep = ''
+			let g:airline_right_sep = ''
+			let g:airline_fugitive_prefix = '   '
+			let g:airline_readonly_symbol = ''
+			let g:airline_linecolumn_prefix = ' '
+			
 	" PLUGIN: vim-latex
 			" IMPORTANT: grep will sometimes skip displaying the file name if you
 			" search in a singe file. This will confuse Latex-Suite. Set your grep
