@@ -99,13 +99,13 @@ endif
 			set laststatus=2	" Always display the statusline
 			set noshowmode		" Hide the default mode text
 			let g:airline_enable_fugitive=1
-			"let g:airline_left_sep = ''
-			"let g:airline_left_alt_sep = ''
-			"let g:airline_right_sep = ''	" fix an inconsistency
-			"let g:airline_right_alt_sep = ''
-			"let g:airline_fugitive_prefix = '   '
-			"let g:airline_readonly_symbol = ''
-			"let g:airline_linecolumn_prefix = ' '
+			let g:airline_left_sep = ''
+			let g:airline_left_alt_sep = ''
+			let g:airline_right_sep = ''	" fix an inconsistency
+			let g:airline_right_alt_sep = ''
+			let g:airline_fugitive_prefix = '   '
+			let g:airline_readonly_symbol = ''
+			let g:airline_linecolumn_prefix = ' '
 	" PLUGIN: vim-latex
 			" IMPORTANT: grep will sometimes skip displaying the file name if you
 			" search in a singe file. This will confuse Latex-Suite. Set your grep
