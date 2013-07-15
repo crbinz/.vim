@@ -103,7 +103,6 @@ endif
 			let g:airline_fugitive_prefix = '   '
 			let g:airline_readonly_symbol = ''
 			let g:airline_linecolumn_prefix = ' '
-			
 	" PLUGIN: vim-latex
 			" IMPORTANT: grep will sometimes skip displaying the file name if you
 			" search in a singe file. This will confuse Latex-Suite. Set your grep
