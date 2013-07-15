@@ -95,6 +95,8 @@ endif
 			" Map :NERDTree command to <leader>N
 			noremap <leader>N :NERDTree<CR>
 	" PLUGIN: vim-airline
+			set laststatus=2	" Always display the statusline
+			set noshowmode		" Hide the default mode text
 			let g:airline_enable_fugitive=1
 			let g:airline_left_sep = ''
 			let g:airline_left_sep = ''
