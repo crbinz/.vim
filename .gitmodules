@@ -14,11 +14,15 @@
 	path = bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim
 [submodule "bundle/pyrepl"]
+
 	path = bundle/pyrepl
+
 	url = https://github.com/Bogdanp/pyrepl.vim
+[submodule "bundle/vim-fugitive"]
+
+	path = bundle/vim-fugitive
+
+	url = git://github.com/tpope/vim-fugitive
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
-	url = git://github.com/bling/vim-airline
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive
+	url = git://github.com/bling/vim-airline.git
