@@ -91,6 +91,8 @@ endif
 			" NOTE: make sure these lines appear after other syntax is set in .vimrc (i.e.
 			" after `syntax on`
 			autocmd FileType vo_base setlocal ft+=.links
+			" continue bullet points
+			autocmd FileType vo_base setlocal comments+=n:*,n:+,n:-
 	" PLUGIN: NERDTree
 			" Map :NERDTree command to <leader>N
 			noremap <leader>N :NERDTree<CR>
@@ -157,6 +159,7 @@ endif
 		set concealcursor=nc	"define when to hide concealed text, 'nc' is in normal and command line mode
 		" allow backspacing over everything in insert mode
 		set backspace=indent,eol,start
+
 "----------------------------------------
 
 "          BOILERPLATE/DEFAULTS
