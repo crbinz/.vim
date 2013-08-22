@@ -136,7 +136,7 @@ endif
 	" PLUGIN: vim-outliner
 			"allow hoisting
 			let g:vo_modules_load="checkbox:hoist"
-			let maplocalleader= ",,"
+			let maplocalleader= ","
 	" PLUGIN: CtrlP
 			" easy buffer listing
 			nnoremap <C-b> :CtrlPBuffer<CR>
