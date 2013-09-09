@@ -24,3 +24,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git://github.com/bling/vim-airline
+[submodule "bundle/OutlookVim"]
+	path = bundle/OutlookVim
+	url = https://github.com/vim-scripts/OutlookVim
