@@ -42,7 +42,6 @@ endif
 			" spellfile is local to each file, use this line to set it
 			"set spellfile=~/Dropbox/vim/vimfiles/spell/en.latin1.add
 "----------------------------------------
-
 "              FOLDING
 "----------------------------------------
 	" save Foldings automatically -> These are stored in views
