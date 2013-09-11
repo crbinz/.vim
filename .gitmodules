@@ -27,3 +27,6 @@
 [submodule "bundle/OutlookVim"]
 	path = bundle/OutlookVim
 	url = https://github.com/vim-scripts/OutlookVim
+[submodule "bundle/julia-vim"]
+	path = bundle/julia-vim
+	url = git://github.com/JuliaLang/julia-vim.git
