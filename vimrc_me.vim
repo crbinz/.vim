@@ -80,9 +80,15 @@ endif
 	" requires gvimfullscreen_win32 (just a .dll in the gvim.exe
 	" directory)
 	map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
+
+	" pandoc
+	" convert current file (markdown - .mkd) to pdf using pandoc
+	fun! ConvertPandoc() 	"{{{
+		execute 'silent !pandoc -o %:r.pdf %'
+	endfunction	"}}}
+	command! ConvertPandoc call ConvertPandoc()
+	autocmd FileType markdown map <localleader>pdf :ConvertPandoc<CR>
 "----------------------------------------
-
-
 "              PLUGINS
 "----------------------------------------
 	" PLUGIN: Pathogen
