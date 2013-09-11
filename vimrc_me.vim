@@ -71,6 +71,12 @@ endif
 	inoremap <A-w> <C-o>w
 	inoremap <A-b> <C-o>b
 
+	" clear the search buffer when hitting return
+	nnoremap <CR> :nohlsearch<cr>
+
+	" bring up the Scratch buffer
+	nnoremap <localleader>s :Scratch<cr>
+
 	" requires gvimfullscreen_win32 (just a .dll in the gvim.exe
 	" directory)
 	map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen",0)<CR>
@@ -133,7 +139,7 @@ endif
 	" PLUGIN: vim-outliner
 			"allow hoisting
 			let g:vo_modules_load="checkbox:hoist"
-			let maplocalleader= ",,"
+			let maplocalleader= ","
 	" PLUGIN: CtrlP
 			" easy buffer listing
 			nnoremap <C-b> :CtrlPBuffer<CR>

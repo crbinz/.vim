@@ -141,7 +141,7 @@ else
 	hi OL5 guifg=white	ctermfg=white
 	hi OL6 guifg=Orange1	ctermfg=214
 	hi OL7 guifg=lightblue	ctermfg=lightblue
-	hi OL8 guifg=darkviolet	ctermfg=magenta
+	hi OL8 guifg=GreenYellow ctermfg=154
 	hi OL9 guifg=white	ctermfg=white
 
 	" colors for tags
