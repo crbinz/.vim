@@ -49,7 +49,7 @@ endif
 	" first specify view dir 
 	" notes viewfiles in a	different dir.
 	setl viewdir=~/view
-	autocmd FileType outliner,vo_base setl viewdir=~/notes/view 	
+	autocmd FileType outliner,vo_base setl viewdir=~/notes/view 
 	au BufWinLeave * silent! mkview
 	au BufWinEnter * silent! loadview
 "----------------------------------------
@@ -146,9 +146,13 @@ endif
 			"allow hoisting
 			let g:vo_modules_load="checkbox:hoist"
 			let maplocalleader= ","
+			let mapleader= ","
 	" PLUGIN: CtrlP
 			" easy buffer listing
 			nnoremap <C-b> :CtrlPBuffer<CR>
+	" PLUGIN: vim-table-mode
+			" Table creation
+			nnoremap <localleader>tm :TableModeToggle<CR>
 "----------------------------------------
 
 "           FILE MANAGEMENT
