@@ -70,6 +70,8 @@ endif
 	inoremap <A-l> <C-o>l
 	inoremap <A-w> <C-o>w
 	inoremap <A-b> <C-o>b
+	
+	let maplocalleader=","
 
 	" clear the search buffer when hitting return
 	nnoremap <CR> :nohlsearch<cr>
