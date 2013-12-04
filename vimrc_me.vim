@@ -72,6 +72,9 @@ endif
 	
 	let maplocalleader=","
 
+	" switch between scrolloff settings
+	nnoremap <localleader>zz :let &scrolloff=999-&scrolloff<CR>
+
 	" clear the search buffer when hitting return
 	nnoremap <CR> :nohlsearch<cr>
 
