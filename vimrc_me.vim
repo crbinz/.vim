@@ -16,10 +16,10 @@ endif
 			" items, m for menu bar, T for toolbar
 			set go=
 			"default window size
-			set lines=66 columns=111
+		"	set lines=66 columns=111
 			"colorscheme darkblue
-			colorscheme desert
-			set t_Co=256
+            set background=dark
+			colorscheme solarized
 		" match parenthesis
 			set showmatch
 	" COLORS AND FONT	
