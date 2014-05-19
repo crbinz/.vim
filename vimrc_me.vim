@@ -41,18 +41,13 @@ endif
 			set spellcapcheck=""
 			" spellfile is local to each file, use this line to set it
 			"set spellfile=~/Dropbox/vim/vimfiles/spell/en.latin1.add
+	" OTHER
+			" set tab width
+			set smartindent
+			set tabstop=4
+			set shiftwidth=4
+			set expandtab
 "----------------------------------------
-"              FOLDING
-"----------------------------------------
-	" save Foldings automatically -> These are stored in views
-	" first specify view dir 
-	" notes viewfiles in a	different dir.
-	setl viewdir=~/view
-	autocmd FileType outliner,vo_base setl viewdir=~/notes/view 
-	au BufWinLeave * silent! mkview
-	au BufWinEnter * silent! loadview
-"----------------------------------------
-
 "              MAPPINGS
 "  (also see plugin-based mappings below)
 "----------------------------------------
@@ -102,55 +97,9 @@ endif
 			call pathogen#helptags()
 			" enable pathogen
 			execute pathogen#infect()
-	" PLUGIN: vim-links
-			" add one of these for each file type you want vim-links to be active
-			" NOTE: make sure these lines appear after other syntax is set in .vimrc (i.e.
-			" after `syntax on`
-			autocmd FileType vo_base setlocal ft+=.links
-			" continue bullet points
-			autocmd FileType vo_base setlocal comments+=n:*,n:+,n:-
 	" PLUGIN: NERDTree
 			" Map :NERDTree command to <leader>N
 			noremap <leader>N :NERDTree<CR>
-	" PLUGIN: vim-airline
-			let g:airline_theme='dark'
-			set laststatus=2	" Always display the statusline
-			set noshowmode		" Hide the default mode text
-			let g:airline_enable_fugitive=1
-			let g:airline_left_sep = ''
-			let g:airline_left_alt_sep = ''
-			let g:airline_right_sep = ''	" fix an inconsistency
-			let g:airline_right_alt_sep = ''
-			let g:airline_fugitive_prefix = '   '
-			let g:airline_readonly_symbol = ''
-			let g:airline_linecolumn_prefix = ' '
-	" PLUGIN: vim-latex
-			" IMPORTANT: grep will sometimes skip displaying the file name if you
-			" search in a singe file. This will confuse Latex-Suite. Set your grep
-			" program to always generate a file-name.
-			set grepprg=grep\ -nH\ $*
-			" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-			" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-			" The following changes the default filetype back to 'tex':
-			let g:tex_flavor='latex'
-			" PDF viewer (other OS's should work by default)
-			if has("win32") || has("win64")
-				let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF'
-			else
-				let g:Tex_TreatMacViewerAsUNIX = 1
-				let g:Tex_ExecuteUNIXViewerInForeground = 1
-				let g:Tex_ViewRule_pdf = 'open -a Skim'
-			endif
-			" Suppress all warnings below level 4
-			let g:TCLevel = 4
-			" Make LaTeX-suite stop opening files with errors
-			" automatically
-			let g:Tex_GotoError=0
-	" PLUGIN: vim-outliner
-			"allow hoisting
-			let g:vo_modules_load="checkbox:hoist"
-			let maplocalleader= ","
-			let mapleader= ","
 	" PLUGIN: CtrlP
 			" easy buffer listing
 			nnoremap <C-b> :CtrlPBuffer<CR>
@@ -158,30 +107,15 @@ endif
 			" Table creation
 			nnoremap <localleader>tm :TableModeToggle<CR>
 "----------------------------------------
-
 "           FILE MANAGEMENT
 "----------------------------------------
-		" specify where viminfo should be pulled from
-		" viminfo is where marks are stored
-		set viminfo='1000,<50,s10,h,rA:,rB:,n~/notes/.viminfo
-		" change backup/swap file directory
-		if has("win32") || has("win64")
-			 set directory=$TMP
-		else
-			set directory=/tmp
-		end
 "----------------------------------------
-
 "               OTHER
 "----------------------------------------
-		" use conceal
-		set conceallevel=2 "level 2 = hide, don't replace with any character
-		set concealcursor=nc	"define when to hide concealed text, 'nc' is in normal and command line mode
 		" allow backspacing over everything in insert mode
 		set backspace=indent,eol,start
 
 "----------------------------------------
-
 "          BOILERPLATE/DEFAULTS
 "----------------------------------------
 		if has("vms")
