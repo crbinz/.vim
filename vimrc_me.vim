@@ -106,6 +106,9 @@ endif
 	" PLUGIN: vim-table-mode
 			" Table creation
 			nnoremap <localleader>tm :TableModeToggle<CR>
+	" PLUGIN: vim-airline
+            " Enable on startup
+            set laststatus=2
 "----------------------------------------
 "           FILE MANAGEMENT
 "----------------------------------------
