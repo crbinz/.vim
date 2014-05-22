@@ -18,6 +18,7 @@ endif
 			"default window size
 		"	set lines=66 columns=111
 			"colorscheme darkblue
+            set t_Co=256
             set background=dark
 			colorscheme solarized
 		" match parenthesis
