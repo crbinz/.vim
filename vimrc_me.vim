@@ -109,6 +109,7 @@ endif
 	" PLUGIN: vim-airline
             " Enable on startup
             set laststatus=2
+            let g:airline_theme='zenburn'
             " Special font for glyphs - font needs to be "_ for Powerline" in
             " terminal
             " https://github.com/Lokaltog/powerline-fonts
