@@ -109,6 +109,10 @@ endif
 	" PLUGIN: vim-airline
             " Enable on startup
             set laststatus=2
+            " Special font for glyphs - font needs to be "_ for Powerline" in
+            " terminal
+            " https://github.com/Lokaltog/powerline-fonts
+            let g:airline_powerline_fonts = 1
 "----------------------------------------
 "           FILE MANAGEMENT
 "----------------------------------------
