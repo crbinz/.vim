@@ -115,6 +115,10 @@ endif
             " terminal
             " https://github.com/Lokaltog/powerline-fonts
             let g:airline_powerline_fonts = 1
+	" PLUGIN: tmux-airline
+            " don't just match vim-airline's colorscheme
+            let g:airline#extensions#tmuxline#enabled = 0
+
 "----------------------------------------
 "           FILE MANAGEMENT
 "----------------------------------------
