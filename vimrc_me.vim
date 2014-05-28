@@ -48,6 +48,9 @@ endif
 			set tabstop=4
 			set shiftwidth=4
 			set expandtab
+            " ignore case when all lower, don't ignore when mixed
+            set smartcase
+
 "----------------------------------------
 "              MAPPINGS
 "  (also see plugin-based mappings below)
@@ -65,6 +68,14 @@ endif
 	inoremap <A-l> <C-o>l
 	inoremap <A-w> <C-o>w
 	inoremap <A-b> <C-o>b
+
+    " use 'very magic' (i.e. normal) regexp settings for all regexps
+    nnoremap / /\v
+    vnoremap / /\v
+    cnoremap %s/ %smagic/
+    cnoremap \>s/ \>smagic/
+    nnoremap :g/ :g/\v
+    nnoremap :g// :g//
 	
 	let maplocalleader=","
 
